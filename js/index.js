@@ -40,3 +40,55 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let DiA = document.querySelector("h1");
+DiA.textContent = siteContent.cta["h1"];
+// console.log(DiA);
+
+const links = document.querySelectorAll("nav a");
+// console.log(links);
+
+// console.log(siteContent.nav);
+const navLinks = siteContent.nav;
+// console.log(navLinks);
+links[0].textContent = navLinks["nav-item-1"];
+links[1].textContent = navLinks["nav-item-2"];
+links[2].textContent = navLinks["nav-item-3"];
+links[3].textContent = navLinks["nav-item-4"];
+links[4].textContent = navLinks["nav-item-5"];
+links[5].textContent = navLinks["nav-item-6"];
+// console.log(navLinks["nav-item-1"]);
+
+let codeCircle = document.getElementById("cta-img");
+codeCircle.setAttribute('src', "img/header-img.png" );
+
+let buttonA = document.querySelector("button");
+buttonA.textContent = siteContent.cta["button"];
+
+let featuresT = document.querySelector("h4");
+// console.log(featuresT);
+featuresT.textContent = siteContent["main-content"]["features-h4"];
+// console.log(siteContent["main-content"]["features-h4"]);
+// let featuresB = document.querySelector("p");
+let featuresB = featuresT.nextElementSibling;
+console.log(featuresB);
+let aboutT = featuresT.nextElementSibling;
+// let test2 = test.nextElementSibling;
+let test1 = document.querySelector("div.text-content");
+let test2 = test1.nextElementSibling;
+console.log(test1);
+console.log(test2);
+
+console.log(aboutT);
+aboutT.textContent = siteContent["main-content"]["about-h4"];
+featuresB.textContent = siteContent["main-content"]["features-content"];
+let test3 = test2.querySelector("h4");
+console.log(test3);
+test3.textContent = siteContent["main-content"]["about-h4"];
+let test4 = test3.nextElementSibling;
+test4.textContent = siteContent["main-content"]["about-content"];
+// console.log(document.getElementsByClassName('main-content'));
+
+// aboutT.textContent = siteContent["main-content"]["about-h4"];
+// featuresB.sibl
+//  console.log(aboutT);
