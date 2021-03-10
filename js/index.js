@@ -40,3 +40,109 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let DiA = document.querySelector("h1");
+DiA.textContent = siteContent.cta["h1"];
+// console.log(DiA);
+
+const links = document.querySelectorAll("nav a");
+// console.log(links);
+const navGroup = document.querySelector('nav');
+// console.log(siteContent.nav);
+const navLinks = siteContent.nav;
+// console.log(navLinks);
+links[0].textContent = navLinks["nav-item-1"];
+links[1].textContent = navLinks["nav-item-2"];
+links[2].textContent = navLinks["nav-item-3"];
+links[3].textContent = navLinks["nav-item-4"];
+links[4].textContent = navLinks["nav-item-5"];
+links[5].textContent = navLinks["nav-item-6"];
+
+links[0].style.color = "green";
+links[1].style.color = "green";
+links[2].style.color = "green";
+links[3].style.color = "green";
+links[4].style.color = "green";
+links[5].style.color = "green";
+
+let newPre = document.createElement('a');
+newPre.innerHTML = 'Home';
+newPre.style.color = "green";
+navGroup.prepend(newPre);
+let newApp = document.createElement('a');
+newApp.innerHTML = 'Doggo';
+newApp.style.color = "green";
+navGroup.append(newApp);
+// console.log(navLinks["nav-item-1"]);
+let navGreen = document.querySelector("nav");
+console.log(navGreen);
+// document.getElementsByClassName
+navGreen.setAttribute('style', "color:green");
+let codeCircle = document.getElementById("cta-img");
+codeCircle.setAttribute('src', "img/header-img.png" );
+
+let buttonA = document.querySelector("button");
+buttonA.textContent = siteContent.cta["button"];
+
+let featuresT = document.querySelector("h4");
+// console.log(featuresT);
+featuresT.textContent = siteContent["main-content"]["features-h4"];
+// console.log(siteContent["main-content"]["features-h4"]);
+// let featuresB = document.querySelector("p");
+let featuresB = featuresT.nextElementSibling;
+console.log(featuresB);
+let aboutT = featuresT.nextElementSibling;
+// let test2 = test.nextElementSibling;
+let test1 = document.querySelector("div.text-content");
+let test2 = test1.nextElementSibling;
+console.log(test1);
+console.log(test2);
+
+console.log(aboutT);
+aboutT.textContent = siteContent["main-content"]["about-h4"];
+featuresB.textContent = siteContent["main-content"]["features-content"];
+let test3 = test2.querySelector("h4");
+console.log(test3);
+test3.textContent = siteContent["main-content"]["about-h4"];
+let test4 = test3.nextElementSibling;
+test4.textContent = siteContent["main-content"]["about-content"];
+let middlePic = document.querySelector("#middle-img");
+middlePic.setAttribute('src', "img/mid-page-accent.jpg");
+// console.log(document.getElementsByClassName('main-content'));
+
+let bottom3 = middlePic.nextElementSibling;
+console.log(bottom3);
+let services = bottom3.querySelector(".text-content");
+let servicesT = services.querySelector("h4");
+servicesT.textContent = siteContent["main-content"]["services-h4"];
+let servicesB = services.querySelector("p");
+servicesB.textContent = siteContent["main-content"]["services-content"];
+
+let product = services.nextElementSibling;
+let productT = product.querySelector("h4");
+productT.textContent = siteContent["main-content"]["product-h4"];
+let productB = product.querySelector("p");
+productB.textContent = siteContent["main-content"]["product-content"];
+
+let vision = product.nextElementSibling;
+let visionT = vision.querySelector("h4");
+visionT.textContent = siteContent["main-content"]["vision-h4"];
+let visionB = vision.querySelector("p");
+visionB.textContent = siteContent["main-content"]["vision-content"];
+console.log(productT);
+
+let contact = document.querySelector(".contact");
+let contactT  = contact.querySelector("h4");
+contactT.textContent = siteContent.contact["contact-h4"];
+let contactB = contactT.nextElementSibling;
+contactB.textContent = siteContent.contact.address;
+contactB = contactB.nextElementSibling;
+contactB.textContent = siteContent.contact.phone;
+contactB = contactB.nextElementSibling;
+contactB.textContent = siteContent.contact.email;
+console.log(contactB);
+
+let footerMain = document.querySelector("footer");
+let footerB = footerMain.querySelector("p");
+footerB.textContent = siteContent.footer.copyright;
+console.log(footerMain);
