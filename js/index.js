@@ -87,8 +87,29 @@ console.log(test3);
 test3.textContent = siteContent["main-content"]["about-h4"];
 let test4 = test3.nextElementSibling;
 test4.textContent = siteContent["main-content"]["about-content"];
+let middlePic = document.querySelector("#middle-img");
+middlePic.setAttribute('src', "img/mid-page-accent.jpg");
 // console.log(document.getElementsByClassName('main-content'));
+let bottom3 = middlePic.nextElementSibling;
+console.log(bottom3);
+let services = bottom3.querySelector(".text-content");
+let servicesT = services.querySelector("h4");
+servicesT.textContent = siteContent["main-content"]["services-h4"];
+let servicesB = services.querySelector("p");
+servicesB.textContent = siteContent["main-content"]["services-content"];
 
+let product = services.nextElementSibling;
+let productT = product.querySelector("h4");
+productT.textContent = siteContent["main-content"]["product-h4"];
+let productB = product.querySelector("p");
+productB.textContent = siteContent["main-content"]["product-content"];
+
+let vision = product.nextElementSibling;
+let visionT = vision.querySelector("h4");
+visionT.textContent = siteContent["main-content"]["vision-h4"];
+let visionB = vision.querySelector("p");
+visionB.textContent = siteContent["main-content"]["vision-content"];
+console.log(productT);
 // aboutT.textContent = siteContent["main-content"]["about-h4"];
 // featuresB.sibl
 //  console.log(aboutT);
