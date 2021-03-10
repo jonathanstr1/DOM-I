@@ -90,6 +90,7 @@ test4.textContent = siteContent["main-content"]["about-content"];
 let middlePic = document.querySelector("#middle-img");
 middlePic.setAttribute('src', "img/mid-page-accent.jpg");
 // console.log(document.getElementsByClassName('main-content'));
+
 let bottom3 = middlePic.nextElementSibling;
 console.log(bottom3);
 let services = bottom3.querySelector(".text-content");
@@ -110,6 +111,19 @@ visionT.textContent = siteContent["main-content"]["vision-h4"];
 let visionB = vision.querySelector("p");
 visionB.textContent = siteContent["main-content"]["vision-content"];
 console.log(productT);
-// aboutT.textContent = siteContent["main-content"]["about-h4"];
-// featuresB.sibl
-//  console.log(aboutT);
+
+let contact = document.querySelector(".contact");
+let contactT  = contact.querySelector("h4");
+contactT.textContent = siteContent.contact["contact-h4"];
+let contactB = contactT.nextElementSibling;
+contactB.textContent = siteContent.contact.address;
+contactB = contactB.nextElementSibling;
+contactB.textContent = siteContent.contact.phone;
+contactB = contactB.nextElementSibling;
+contactB.textContent = siteContent.contact.email;
+console.log(contactB);
+
+let footerMain = document.querySelector("footer");
+let footerB = footerMain.querySelector("p");
+footerB.textContent = siteContent.footer.copyright;
+console.log(footerMain);
