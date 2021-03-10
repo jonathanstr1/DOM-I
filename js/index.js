@@ -47,7 +47,7 @@ DiA.textContent = siteContent.cta["h1"];
 
 const links = document.querySelectorAll("nav a");
 // console.log(links);
-
+const navGroup = document.querySelector('nav');
 // console.log(siteContent.nav);
 const navLinks = siteContent.nav;
 // console.log(navLinks);
@@ -57,8 +57,27 @@ links[2].textContent = navLinks["nav-item-3"];
 links[3].textContent = navLinks["nav-item-4"];
 links[4].textContent = navLinks["nav-item-5"];
 links[5].textContent = navLinks["nav-item-6"];
-// console.log(navLinks["nav-item-1"]);
 
+links[0].style.color = "green";
+links[1].style.color = "green";
+links[2].style.color = "green";
+links[3].style.color = "green";
+links[4].style.color = "green";
+links[5].style.color = "green";
+
+let newPre = document.createElement('a');
+newPre.innerHTML = 'Home';
+newPre.style.color = "green";
+navGroup.prepend(newPre);
+let newApp = document.createElement('a');
+newApp.innerHTML = 'Doggo';
+newApp.style.color = "green";
+navGroup.append(newApp);
+// console.log(navLinks["nav-item-1"]);
+let navGreen = document.querySelector("nav");
+console.log(navGreen);
+// document.getElementsByClassName
+navGreen.setAttribute('style', "color:green");
 let codeCircle = document.getElementById("cta-img");
 codeCircle.setAttribute('src', "img/header-img.png" );
 
